@@ -6,12 +6,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>AgentScope</title>
 		<script>
-			// Applied before the first paint, so the theme never flashes.
-			const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
-			const applyTheme = () =>
-				document.documentElement.classList.toggle('dark', darkQuery.matches);
-			applyTheme();
-			darkQuery.addEventListener('change', applyTheme);
+			// Honor the user's saved theme before first paint. Default to dark.
+			let theme = 'dark';
+			try {
+				theme = localStorage.getItem('agentscope-theme') === 'light' ? 'light' : 'dark';
+			} catch {
+				// Storage may be unavailable; still start in dark mode.
+			}
+			document.documentElement.classList.toggle('dark', theme === 'dark');
+			document.documentElement.style.colorScheme = theme;
 		</script>
 	</head>
 	<body>
