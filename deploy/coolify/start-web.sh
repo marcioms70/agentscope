@@ -10,4 +10,9 @@ fi
 umask 077
 htpasswd -bcB /etc/nginx/.htpasswd "$AGENTSCOPE_BASIC_AUTH_USER" "$AGENTSCOPE_BASIC_AUTH_PASSWORD" > /dev/null
 
+# nginx runs worker processes as the nginx user, not root.
+# Allow its group to read the bcrypt password file without exposing it to all users.
+chown root:nginx /etc/nginx/.htpasswd
+chmod 640 /etc/nginx/.htpasswd
+
 exec nginx -g 'daemon off;'
