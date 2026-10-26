@@ -53,7 +53,9 @@
 		"message": "Message",
 		"llm": "LLM",
 		"tts": "TTS",
-		"embedding": "Embedding"
+		"embedding": "Embedding",
+		"language": "Language",
+		"switchToPtBr": "Switch to Brazilian Portuguese"
 	},
 	"error": {
 		"description": "The page hit an unexpected error. You can retry or go back home.",
