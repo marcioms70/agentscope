@@ -53,7 +53,9 @@
 		"message": "消息",
 		"llm": "LLM",
 		"tts": "TTS",
-		"embedding": "向量"
+		"embedding": "向量",
+		"language": "语言",
+		"switchToPtBr": "切换为巴西葡萄牙语"
 	},
 	"error": {
 		"description": "页面遇到意外错误。你可以重试或返回首页。",
