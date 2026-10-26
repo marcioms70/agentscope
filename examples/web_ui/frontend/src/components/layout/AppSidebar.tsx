@@ -3,6 +3,7 @@ import {
 	BotMessageSquare,
 	Cable,
 	Calendars,
+	Check,
 	Compass,
 	KeyRound,
 	Languages,
@@ -18,6 +19,12 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import AgentScope from '@/assets/images/agentscope_mono.svg?react';
 import MCPSvg from '@/assets/images/mcp.svg?react';
 import { CHAT_TOUR_NAME } from '@/components/tour/chatTourSteps';
+import {
+	DropdownMenu,
+	DropdownMenuContent,
+	DropdownMenuItem,
+	DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 import {
 	Sidebar,
 	SidebarContent,
@@ -50,11 +57,6 @@ export function AppSidebar() {
 		} else {
 			startOnborda(CHAT_TOUR_NAME);
 		}
-	};
-
-	const handleToggleLanguage = () => {
-		const next = i18n.language.startsWith('zh') ? 'en' : 'zh';
-		i18n.changeLanguage(next);
 	};
 
 	return (
@@ -170,18 +172,35 @@ export function AppSidebar() {
 						</SidebarMenuButton>
 					</SidebarMenuItem>
 					<SidebarMenuItem>
-						<SidebarMenuButton
-							tooltip={{
-								children: i18n.language.startsWith('zh')
-									? t('common.switchToEn')
-									: t('common.switchToZh'),
-								hidden: false,
-							}}
-							onClick={handleToggleLanguage}
-							className="justify-center"
-						>
-							<Languages />
-						</SidebarMenuButton>
+						<DropdownMenu>
+							<DropdownMenuTrigger asChild>
+								<SidebarMenuButton
+									aria-label={t('common.language')}
+									data-testid="language-selector"
+									className="justify-center"
+									title={t('common.language')}
+								>
+									<Languages />
+								</SidebarMenuButton>
+							</DropdownMenuTrigger>
+							<DropdownMenuContent side="right" align="end" className="min-w-52">
+								{[
+									{ code: 'pt-BR', label: 'Português (Brasil)' },
+									{ code: 'en', label: 'English' },
+									{ code: 'zh', label: '中文 (简体)' },
+								].map(({ code, label }) => (
+									<DropdownMenuItem
+										key={code}
+										lang={code}
+										onSelect={() => void i18n.changeLanguage(code)}
+										className="justify-between gap-3"
+									>
+										{label}
+										{i18n.resolvedLanguage === code && <Check className="size-4" />}
+									</DropdownMenuItem>
+								))}
+							</DropdownMenuContent>
+						</DropdownMenu>
 					</SidebarMenuItem>
 					<SidebarMenuItem>
 						<SidebarMenuButton
