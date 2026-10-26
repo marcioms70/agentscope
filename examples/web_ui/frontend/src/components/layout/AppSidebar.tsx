@@ -7,8 +7,11 @@ import {
 	KeyRound,
 	Languages,
 	LibraryBig,
+	Moon,
+	Sun,
 	UserRound,
 } from 'lucide-react';
+import { useTheme } from 'next-themes';
 import { useOnborda } from 'onborda';
 import { useNavigate, useLocation } from 'react-router-dom';
 
@@ -34,6 +37,9 @@ export function AppSidebar() {
 	const location = useLocation();
 	const { t } = useTranslation();
 	const { startOnborda } = useOnborda();
+	const { resolvedTheme, setTheme } = useTheme();
+	const darkMode = resolvedTheme !== 'light';
+	const themeToggleLabel = darkMode ? t('common.switchToLight') : t('common.switchToDark');
 
 	const handleStartTour = () => {
 		if (!location.pathname.startsWith('/chat')) {
@@ -151,6 +157,18 @@ export function AppSidebar() {
 			</SidebarContent>
 			<SidebarFooter>
 				<SidebarMenu>
+					<SidebarMenuItem>
+						<SidebarMenuButton
+							tooltip={{ children: themeToggleLabel, hidden: false }}
+							aria-label={themeToggleLabel}
+							aria-pressed={darkMode}
+							data-testid="theme-toggle"
+							onClick={() => setTheme(darkMode ? 'light' : 'dark')}
+							className="justify-center"
+						>
+							{darkMode ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}
+						</SidebarMenuButton>
+					</SidebarMenuItem>
 					<SidebarMenuItem>
 						<SidebarMenuButton
 							tooltip={{
