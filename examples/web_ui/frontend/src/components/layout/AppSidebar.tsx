@@ -3,7 +3,6 @@ import {
 	BotMessageSquare,
 	Cable,
 	Calendars,
-	Check,
 	Compass,
 	KeyRound,
 	Languages,
@@ -22,7 +21,8 @@ import { CHAT_TOUR_NAME } from '@/components/tour/chatTourSteps';
 import {
 	DropdownMenu,
 	DropdownMenuContent,
-	DropdownMenuItem,
+	DropdownMenuRadioGroup,
+	DropdownMenuRadioItem,
 	DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import {
@@ -36,7 +36,7 @@ import {
 	SidebarMenuButton,
 	SidebarMenuItem,
 } from '@/components/ui/sidebar';
-import i18n from '@/i18n';
+import i18n, { AVAILABLE_LANGUAGES, selectLanguage } from '@/i18n';
 import { useTranslation } from '@/i18n/useI18n';
 
 export function AppSidebar() {
@@ -47,6 +47,13 @@ export function AppSidebar() {
 	const { resolvedTheme, setTheme } = useTheme();
 	const darkMode = resolvedTheme !== 'light';
 	const themeToggleLabel = darkMode ? t('common.switchToLight') : t('common.switchToDark');
+
+	const handleChangeLanguage = (code: string) => {
+		const chosen = AVAILABLE_LANGUAGES.find((language) => language === code);
+		if (chosen && chosen !== i18n.resolvedLanguage) {
+			void selectLanguage(chosen);
+		}
+	};
 
 	const handleStartTour = () => {
 		if (!location.pathname.startsWith('/chat')) {
@@ -184,21 +191,24 @@ export function AppSidebar() {
 								</SidebarMenuButton>
 							</DropdownMenuTrigger>
 							<DropdownMenuContent side="right" align="end" className="min-w-52">
-								{[
-									{ code: 'pt-BR', label: 'Português (Brasil)' },
-									{ code: 'en', label: 'English' },
-									{ code: 'zh', label: '中文 (简体)' },
-								].map(({ code, label }) => (
-									<DropdownMenuItem
-										key={code}
-										lang={code}
-										onSelect={() => void i18n.changeLanguage(code)}
-										className="justify-between gap-3"
-									>
-										{label}
-										{i18n.resolvedLanguage === code && <Check className="size-4" />}
-									</DropdownMenuItem>
-								))}
+								<DropdownMenuRadioGroup
+									value={i18n.resolvedLanguage || i18n.language}
+									onValueChange={handleChangeLanguage}
+								>
+									{[
+										{ code: 'pt-BR', label: 'Português (Brasil)' },
+										{ code: 'en', label: 'English' },
+										{ code: 'zh', label: '中文 (简体)' },
+									].map(({ code, label }) => (
+										<DropdownMenuRadioItem
+											key={code}
+											value={code}
+											lang={code}
+										>
+											{label}
+										</DropdownMenuRadioItem>
+									))}
+								</DropdownMenuRadioGroup>
 							</DropdownMenuContent>
 						</DropdownMenu>
 					</SidebarMenuItem>
