@@ -1,23 +1,32 @@
-# AgentScope no Coolify (implantação inicial)
+# AgentScope no Coolify — implantação protegida
 
-Esta branch inclui um Docker Compose específico para implantação via **Git repository** no Coolify. Não altera a branch `main`.
+Esta branch `coolify-deploy` mantém o original `main` intacto.
 
-## Configuração no Coolify
+## Implantação
 
-1. **Project > New Resource > Public Repository**.
-2. Informe `https://github.com/marcioms70/agentscope` e selecione a branch `coolify-deploy`.
-3. Escolha **Docker Compose** como Build strategy.
-4. Base Directory: `/`. Docker Compose Location: `/docker-compose.coolify.yml` (use o seletor de caminho relativo conforme a versão do Coolify).
-5. Confirme os serviços `web`, `api` e `redis`.
-6. Configure o domínio HTTPS do serviço `web` na porta interna **80** e, separadamente, o domínio HTTPS do serviço `api` na porta interna **8000**.
-7. Faça o deploy, verifique os logs e configure a URL pública do backend (API) na interface web.
+1. Coolify: Project > New Resource > Public Repository, `https://github.com/marcioms70/agentscope/tree/coolify-deploy`.
+2. Selecione **Docker Compose**, base `/`, arquivo `/docker-compose.coolify.yml`.
+3. **Domains for api: mantenha VAZIO.** O backend deve ser privado, acessível só pela rede Docker.
+4. **Domains for web:** gere um domínio HTTPS no serviço `web` (porta interna **80**).
+5. Em **Environment Variables**, defina os dois valores (marque-os como segredos, sem publicar os valores):
+   - `AGENTSCOPE_BASIC_AUTH_USER`: usuário para abrir a interface.
+   - `AGENTSCOPE_BASIC_AUTH_PASSWORD`: senha longa e exclusiva; nunca inclua no GitHub.
+6. Salve; execute **Deploy**. A interface falha de forma segura se as variáveis estiverem ausentes.
+7. Ao acessar o domínio web, o navegador solicitará usuário e senha HTTP Basic.
+8. Na configuração inicial da interface, o backend sugerido é `https://SEU_DOMINIO_WEB/backend`; o campo usuário nessa tela é apenas o identificador de sessão `X-User-ID`, não a senha de acesso.
 
-O Redis não tem porta publicada, e o serviço persiste seu conteúdo e os workspaces em volumes Docker.
+## Arquitetura
 
-## Cuidados
+- `web`: Nginx serve a interface com Basic Auth e encaminha `/backend/*` para `api:8000/*`.
+- `api`: FastAPI interno (sem domínio nem porta publicada). Seus workspaces persistem num volume Docker.
+- `redis`: serviço interno com persistência AOF em volume.
 
-- **Proteja o acesso à interface e à API** antes de disponibilizar agentes com acesso a ferramentas. O exemplo não deve ser exposto a usuários anônimos sem autenticação e controle de acesso.
-- O arquivo original `examples/agent_service/main.py` usa `QdrantStore(location=":memory:")`; os índices da base vetorial **não persistem** após reinício. Para produção, mude para um Qdrant externo/persistente.
-- O serviço de exemplo registra um MCP Playwright baseado em `npx`. A imagem contém Node.js e `npx`, mas navegadores e bibliotecas de sistema do Playwright podem exigir instalação adicional para essa ferramenta.
-- Defina credenciais de provedores de modelos somente em configuração protegida. **Nunca adicione chaves ao GitHub.**
-- As imagens foram preparadas para uma primeira implantação; builds e operação final devem ser verificados pelos logs do Coolify no seu servidor.
+## Avisos de segurança e operação
+
+- Use apenas **HTTPS**. Basic Auth depende do TLS externo do Coolify.
+- A interface web e o gateway exigem a mesma autenticação. Não crie domínio público direto para `api`.
+- O campo `username` da interface AgentScope é um identificador informado pelo navegador, **não** é autenticação. Esta implantação destina-se a **um único administrador de confiança**, não a múltiplos usuários não confiáveis.
+- O serviço de exemplo expõe ferramentas com acesso ao workspace e MCPs; nunca exponha esta API de forma anônima.
+- O exemplo usa `QdrantStore(location=":memory:")`, de modo que o índice vetorial não persiste no reinício. Para produção, substitua por Qdrant persistente e ajuste backup.
+- Playwright MCP pode exigir dependências de navegador adicionais dentro da imagem.
+- Os Dockerfiles são para primeira implantação. Conferir os logs de build e de execução no Coolify.
