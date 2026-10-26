@@ -1,0 +1,44 @@
+# AgentScope 2.0: Coolify application from Git
+# Source: branch coolify-deploy; Build strategy: Docker Compose
+# Domains: web -> 80, api -> 8000. Never expose Redis publicly.
+services:
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - agentscope_redis:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+
+  api:
+    build:
+      context: .
+      dockerfile: deploy/coolify/Dockerfile.api
+    restart: unless-stopped
+    environment:
+      AGENTSCOPE_REDIS_HOST: redis
+      AGENTSCOPE_REDIS_PORT: "6379"
+      PYTHONUNBUFFERED: "1"
+    depends_on:
+      redis:
+        condition: service_healthy
+    volumes:
+      - agentscope_workspaces:/srv/agentscope/examples/agent_service/workspaces
+    expose:
+      - "8000"
+
+  web:
+    build:
+      context: .
+      dockerfile: deploy/coolify/Dockerfile.web
+    restart: unless-stopped
+    expose:
+      - "80"
+
+volumes:
+  agentscope_redis:
+  agentscope_workspaces:
