@@ -1,334 +1,334 @@
 {
 	"common": {
-		"add": "Add",
-		"agent": "Agent",
-		"cancel": "Cancel",
-		"channel": "Channels",
-		"chat": "Chat",
-		"close": "Close",
-		"confirm": "Confirm",
-		"create": "Create",
-		"creating": "Creating…",
-		"credential": "Credentials",
-		"date": "Date",
-		"delete": "Delete",
-		"disabled": "Disabled",
-		"edit": "Edit",
-		"error": "Something went wrong",
-		"information": "Information",
-		"knowledge": "Knowledge Bases",
-		"loading": "Loading...",
-		"shownCount": "{{count}} shown",
-		"selectedCount": "{{selected}} of {{total}} selected",
-		"model": "Model",
-		"name": "Name",
-		"no": "No",
-		"noData": "No data",
-		"readOnly": "Read-only",
-		"readOnlyTooltip": "Shared with you as read-only; editing and deletion are disabled.",
-		"completed": "Completed",
-		"failed": "Failed",
-		"running": "Running",
-		"save": "Save",
-		"saving": "Saving…",
-		"schedule": "Schedule",
-		"selectAgent": "Select an agent",
-		"settings": "Settings",
-		"switchToLight": "Switch to light mode",
-		"switchToDark": "Switch to dark mode",
-		"switchToZh": "切换为中文",
-		"switchToEn": "Switch to English",
-		"team": "Team",
-		"uploading": "Uploading",
-		"leader": "Leader",
-		"time": "Time",
-		"yes": "Yes",
-		"deleteTitle": "Delete {{entity}} \"{{name}}\"?",
-		"deleteDescription": "This action cannot be undone.",
-		"mcp-hub": "MCP Hub",
-		"mine": "Mine",
-		"my-mcp": "Installed MCPs",
-		"skill-hub": "Skill Hub",
-		"my-skill": "Installed skills",
-		"message": "Message",
+		"add": "Adicionar",
+		"agent": "Agente",
+		"cancel": "Cancelar",
+		"channel": "Canais",
+		"chat": "Conversa",
+		"close": "Fechar",
+		"confirm": "Confirmar",
+		"create": "Criar",
+		"creating": "Criando…",
+		"credential": "Credenciais",
+		"date": "Data",
+		"delete": "Excluir",
+		"disabled": "Desativado",
+		"edit": "Editar",
+		"error": "Ocorreu um erro",
+		"information": "Informações",
+		"knowledge": "Bases de conhecimento",
+		"loading": "Carregando...",
+		"shownCount": "{{count}} exibidos",
+		"selectedCount": "{{selected}} de {{total}} selecionados",
+		"model": "Modelo",
+		"name": "Nome",
+		"no": "Não",
+		"noData": "Sem dados",
+		"readOnly": "Somente leitura",
+		"readOnlyTooltip": "Compartilhado com você em modo somente leitura; edição e exclusão estão desativadas.",
+		"completed": "Concluído",
+		"failed": "Falhou",
+		"running": "Em execução",
+		"save": "Salvar",
+		"saving": "Salvando…",
+		"schedule": "Agendamentos",
+		"selectAgent": "Selecionar um agente",
+		"settings": "Configurações",
+		"switchToLight": "Alternar para o modo claro",
+		"switchToDark": "Alternar para o modo escuro",
+		"switchToZh": "Alternar para chinês",
+		"switchToEn": "Alternar para inglês",
+		"team": "Equipe",
+		"uploading": "Enviando",
+		"leader": "Líder",
+		"time": "Hora",
+		"yes": "Sim",
+		"deleteTitle": "Excluir {{entity}} \"{{name}}\"?",
+		"deleteDescription": "Esta ação não pode ser desfeita.",
+		"mcp-hub": "Central de MCPs",
+		"mine": "Meus",
+		"my-mcp": "MCPs instalados",
+		"skill-hub": "Central de habilidades",
+		"my-skill": "Habilidades instaladas",
+		"message": "Mensagem",
 		"llm": "LLM",
 		"tts": "TTS",
-		"embedding": "Embedding",
-		"switchToPtBr": "Mudar para português (Brasil)",
+		"embedding": "Vetorização",
+		"switchToPtBr": "Alternar para português (Brasil)",
 		"language": "Idioma"
 	},
 	"error": {
-		"description": "The page hit an unexpected error. You can retry or go back home.",
-		"retry": "Retry",
-		"home": "Back to home"
+		"description": "Ocorreu um erro inesperado nesta página. Tente novamente ou volte ao início.",
+		"retry": "Tentar novamente",
+		"home": "Voltar ao início"
 	},
 	"tool": {
-		"callGeneric": "Call tool",
+		"callGeneric": "Executar ferramenta",
 		"read": {
-			"name": "Read",
-			"fileCount_one": "{{count}} file",
-			"fileCount_other": "{{count}} files",
-			"lineCount_one": "Read {{formatted}} line",
-			"lineCount_other": "Read {{formatted}} lines"
+			"name": "Ler",
+			"fileCount_one": "{{count}} arquivo",
+			"fileCount_other": "{{count}} arquivos",
+			"lineCount_one": "{{formatted}} linha lida",
+			"lineCount_other": "{{formatted}} linhas lidas"
 		},
 		"glob": {
-			"name": "Glob"
+			"name": "Listar arquivos"
 		},
 		"taskCreate": {
-			"name": "TaskCreate"
+			"name": "Criar tarefa"
 		},
 		"grep": {
-			"name": "Grep"
+			"name": "Pesquisar texto"
 		},
 		"summary": {
 			"separator": ", ",
-			"bash_one": "ran {{count}} shell command",
-			"bash_other": "ran {{count}} shell commands",
-			"read_one": "read {{count}} file",
-			"read_other": "read {{count}} files",
-			"edit_one": "edited {{count}} file",
-			"edit_other": "edited {{count}} files",
-			"search_one": "searched {{count}} pattern",
-			"search_other": "searched {{count}} patterns",
-			"todo_one": "updated todos {{count}} item",
-			"todo_other": "updated todos {{count}} items",
-			"mcp_one": "called {{count}} MCP tool",
-			"mcp_other": "called {{count}} MCP tools",
-			"fallback_one": "called {{count}} tool",
-			"fallback_other": "called {{count}} tools"
+			"bash_one": "executou {{count}} comando de terminal",
+			"bash_other": "executou {{count}} comandos de terminal",
+			"read_one": "leu {{count}} arquivo",
+			"read_other": "leu {{count}} arquivos",
+			"edit_one": "editou {{count}} arquivo",
+			"edit_other": "editou {{count}} arquivos",
+			"search_one": "pesquisou {{count}} padrão",
+			"search_other": "pesquisou {{count}} padrões",
+			"todo_one": "atualizou {{count}} tarefa",
+			"todo_other": "atualizou {{count}} tarefas",
+			"mcp_one": "executou {{count}} ferramenta MCP",
+			"mcp_other": "executou {{count}} ferramentas MCP",
+			"fallback_one": "executou {{count}} ferramenta",
+			"fallback_other": "executou {{count}} ferramentas"
 		}
 	},
 	"textInput": {
-		"toComplete": "to complete",
-		"attach": "Attach file",
-		"attachNotSupported": "This model does not support file attachments",
-		"send": "Send",
-		"stop": "Stop generating",
-		"stopping": "Stopping ..."
+		"toComplete": "para completar",
+		"attach": "Anexar arquivo",
+		"attachNotSupported": "Este modelo não aceita anexos",
+		"send": "Enviar",
+		"stop": "Interromper geração",
+		"stopping": "Interrompendo..."
 	},
 	"confirmCard": {
-		"toConfirm": "to confirm",
-		"yesWithRule": "Yes, and allow {{toolName}} to execute {{ruleContent}} for this session"
+		"toConfirm": "para confirmar",
+		"yesWithRule": "Sim, e permitir que {{toolName}} execute {{ruleContent}} nesta sessão"
 	},
 	"messageBubble": {
-		"thinking": "Thinking",
-		"thinkingFor": "Thinking for {{duration}}",
-		"audioGenerating": "Generating audio…",
-		"playAudio": "Play audio",
-		"pauseAudio": "Pause audio",
-		"running": "Running...",
+		"thinking": "Pensando",
+		"thinkingFor": "Pensando por {{duration}}",
+		"audioGenerating": "Gerando áudio…",
+		"playAudio": "Reproduzir áudio",
+		"pauseAudio": "Pausar áudio",
+		"running": "Executando...",
 		"hintSource": {
-			"tool_output": "Tool Output",
-			"team": "Team",
-			"team_message": "Team",
-			"schedule": "Schedule",
-			"system": "System",
-			"channel": "Channel",
-			"runtime_state": "Runtime State"
+			"tool_output": "Resultado da ferramenta",
+			"team": "Equipe",
+			"team_message": "Mensagem da equipe",
+			"schedule": "Agendamento",
+			"system": "Sistema",
+			"channel": "Canal",
+			"runtime_state": "Estado de execução"
 		},
 		"error": {
-			"title": "Reply failed",
-			"authentication": "Authentication failed — check the model's API key or credential.",
-			"permission": "Request not allowed — the credential lacks permission for this model or endpoint.",
-			"rate_limit": "Rate limit or quota exceeded — please try again later.",
-			"invalid_request": "The request to the model was rejected as invalid.",
-			"upstream": "The upstream model service returned an error.",
-			"connection": "Could not reach the model service — network error or timeout.",
-			"internal": "An unexpected internal error occurred.",
-			"setup": "The session could not be prepared — check the agent's model, tools and knowledge bases.",
-			"unknown": "The reply failed with an unknown error."
+			"title": "Falha na resposta",
+			"authentication": "Falha na autenticação — confira a chave de API ou a credencial do modelo.",
+			"permission": "Solicitação não permitida — a credencial não tem acesso ao modelo ou endpoint.",
+			"rate_limit": "Limite de requisições ou cota excedido — tente novamente mais tarde.",
+			"invalid_request": "O modelo rejeitou a solicitação por ser inválida.",
+			"upstream": "O serviço do modelo retornou um erro.",
+			"connection": "Não foi possível conectar ao serviço do modelo — erro de rede ou tempo limite.",
+			"internal": "Ocorreu um erro interno inesperado.",
+			"setup": "Não foi possível preparar a sessão — confira o modelo, as ferramentas e as bases de conhecimento do agente.",
+			"unknown": "A resposta falhou por um motivo desconhecido."
 		},
-		"copy": "Copy"
+		"copy": "Copiar"
 	},
 	"chat": {
-		"inputPlaceholder": "Type a message...",
-		"confirmToolCall": "Allow this action?",
-		"subagentConfirmTitle": "{{name}} requests confirmation",
-		"newSession": "New Session",
-		"greeting": "Where should we start?",
+		"inputPlaceholder": "Digite uma mensagem...",
+		"confirmToolCall": "Permitir esta ação?",
+		"subagentConfirmTitle": "{{name}} solicita confirmação",
+		"newSession": "Nova sessão",
+		"greeting": "Por onde vamos começar?",
 		"maxItersExceeded": {
-			"title": "Reached the iteration limit",
-			"description": "Send a new message to keep going, or continue the current task.",
-			"continue": "Continue"
+			"title": "Limite de iterações atingido",
+			"description": "Envie uma mensagem para continuar ou prossiga com a tarefa atual.",
+			"continue": "Continuar"
 		},
 		"agent": {
-			"selectPlaceholder": "Select an agent",
-			"emptyTitle": "No agents",
-			"emptyDescription": "Create an agent to get started.",
-			"groupYours": "Yours",
-			"groupShared": "Shared with you"
+			"selectPlaceholder": "Selecione um agente",
+			"emptyTitle": "Nenhum agente",
+			"emptyDescription": "Crie um agente para começar.",
+			"groupYours": "Seus agentes",
+			"groupShared": "Compartilhados com você"
 		},
 		"session": {
-			"label": "Session",
-			"emptyTitle": "No sessions",
-			"emptyNoAgent": "Select an agent first.",
-			"emptyHasAgent": "Create a session to start chatting.",
-			"today": "Today",
-			"earlier": "Earlier"
+			"label": "Sessão",
+			"emptyTitle": "Nenhuma sessão",
+			"emptyNoAgent": "Selecione um agente primeiro.",
+			"emptyHasAgent": "Crie uma sessão para iniciar uma conversa.",
+			"today": "Hoje",
+			"earlier": "Anteriores"
 		}
 	},
 	"dialog-agent-create": {
-		"title": "Create agent",
-		"description": "Define a new agent's identity and behaviour."
+		"title": "Criar agente",
+		"description": "Defina a identidade e o comportamento do novo agente."
 	},
 	"agent-form": {
 		"identity": {
-			"legend": "Agent Identity",
-			"description": "Name and instructions that define this agent's behaviour.",
+			"legend": "Identidade do agente",
+			"description": "Nome e instruções que definem o comportamento do agente.",
 			"name": {
-				"label": "Name",
-				"placeholder": "My agent"
+				"label": "Nome",
+				"placeholder": "Meu agente"
 			},
 			"system-prompt": {
-				"label": "System prompt"
+				"label": "Instruções do sistema"
 			}
 		},
 		"context-config": {
-			"legend": "Context Config",
-			"description": "Controls how the context window is managed and compressed.",
+			"legend": "Configuração de contexto",
+			"description": "Controla como a janela de contexto é gerenciada e compactada.",
 			"trigger-ratio": {
-				"label": "Trigger ratio"
+				"label": "Proporção para acionamento"
 			},
 			"reserve-ratio": {
-				"label": "Reserve ratio"
+				"label": "Proporção de reserva"
 			},
 			"tool-result-limit": {
-				"label": "Tool result limit"
+				"label": "Limite do resultado da ferramenta"
 			},
 			"compression-prompt": {
-				"label": "Compression prompt"
+				"label": "Instruções de compactação"
 			},
 			"summary-template": {
-				"label": "Summary template"
+				"label": "Modelo de resumo"
 			},
 			"max-image-num": {
-				"label": "Max images"
+				"label": "Máximo de imagens"
 			}
 		},
 		"react-config": {
-			"legend": "ReAct Config",
-			"description": "Controls the reasoning and action loop behaviour.",
+			"legend": "Configuração ReAct",
+			"description": "Controla o ciclo de raciocínio e execução de ações.",
 			"max-iters": {
-				"label": "Max iterations"
+				"label": "Máximo de iterações"
 			},
 			"stop-on-reject": {
-				"label": "Stop on reject"
+				"label": "Parar ao rejeitar"
 			},
 			"structured-output-grace-iters": {
-				"label": "Structured output grace",
-				"description": "Extra iterations allowed past the maximum, so a run that hits the limit can still produce the structured output it was asked for."
+				"label": "Iterações extras para saída estruturada",
+				"description": "Iterações adicionais após o limite para permitir a geração da saída estruturada solicitada."
 			},
 			"interruption-message": {
-				"label": "Interruption reply",
-				"description": "Sent as the agent’s reply when the user interrupts a run."
+				"label": "Resposta de interrupção",
+				"description": "Enviada como resposta do agente quando o usuário interrompe uma execução."
 			},
 			"interruption-raise-cancelled-error": {
-				"label": "Raise CancelledError",
-				"description": "Re-raise asyncio.CancelledError once an interruption has been handled, instead of swallowing it."
+				"label": "Propagar CancelledError",
+				"description": "Propaga novamente asyncio.CancelledError após tratar uma interrupção, em vez de ignorá-la."
 			}
 		},
 		"invite-config": {
-			"legend": "Invite Config",
-			"description": "Controls whether other agents can borrow this one via AgentInvite.",
+			"legend": "Configuração de convite",
+			"description": "Controla se outros agentes podem usar este agente por meio de AgentInvite.",
 			"invitable": {
-				"label": "Invitable"
+				"label": "Pode ser convidado"
 			},
 			"invite-description": {
-				"label": "Invite description",
-				"placeholder": "Briefly describe this agent's expertise; required when invitable is on."
+				"label": "Descrição para convite",
+				"placeholder": "Descreva brevemente a especialidade do agente; obrigatório quando os convites estiverem ativados."
 			}
 		}
 	},
 	"dialog-agent-edit": {
-		"title": "Edit agent",
-		"description": "Update this agent's configuration."
+		"title": "Editar agente",
+		"description": "Atualize a configuração deste agente."
 	},
 	"dialog-agent-delete": {
-		"entity": "agent",
-		"confirm": "Delete"
+		"entity": "agente",
+		"confirm": "Excluir"
 	},
 	"dialog-session-delete": {
-		"entity": "session",
-		"confirm": "Delete"
+		"entity": "sessão",
+		"confirm": "Excluir"
 	},
 	"dialog-session-rename": {
-		"title": "Rename session",
-		"description": "Give this session a new name.",
-		"label": "Name",
-		"placeholder": "Session name"
+		"title": "Renomear sessão",
+		"description": "Dê um novo nome a esta sessão.",
+		"label": "Nome",
+		"placeholder": "Nome da sessão"
 	},
 	"session-menu": {
-		"rename": "Rename",
-		"delete": "Delete"
+		"rename": "Renomear",
+		"delete": "Excluir"
 	},
 	"dialog-credential-create": {
-		"title": "Add credential",
-		"description": "Add credentials for a model provider.",
-		"selectType": "Provider",
-		"selectTypePlaceholder": "Select a provider"
+		"title": "Adicionar credencial",
+		"description": "Adicione credenciais de um provedor de modelos.",
+		"selectType": "Provedor",
+		"selectTypePlaceholder": "Selecione um provedor"
 	},
 	"dialog-credential-edit": {
-		"title": "Edit Credential",
-		"description": "Update the saved credential for this provider."
+		"title": "Editar credencial",
+		"description": "Atualize a credencial salva para este provedor."
 	},
 	"dialog-knowledge-base-create": {
-		"title": "Create knowledge base",
-		"description": "Create a new knowledge base using an embedding model.",
+		"title": "Criar base de conhecimento",
+		"description": "Crie uma base de conhecimento usando um modelo de embeddings.",
 		"name": {
-			"label": "Name",
-			"placeholder": "My knowledge base"
+			"label": "Nome",
+			"placeholder": "Minha base de conhecimento"
 		},
 		"descriptionField": {
-			"label": "Description",
-			"placeholder": "Describe what this knowledge base is for."
+			"label": "Descrição",
+			"placeholder": "Descreva a finalidade desta base de conhecimento."
 		},
 		"embeddingModel": {
-			"label": "Embedding model"
+			"label": "Modelo de embeddings"
 		},
 		"dimension": {
-			"label": "Dimension"
+			"label": "Dimensão"
 		},
 		"chunker": {
-			"label": "Chunker"
+			"label": "Divisor de conteúdo"
 		},
 		"policy": {
-			"lockedTitle": "Dimension is locked to {{dimension}}d",
-			"lockedDescription": "This server already pins all knowledge bases to {{dimension}}-dim embeddings. Only compatible models are listed below.",
-			"noCompatibleTitle": "No compatible embedding models",
-			"noCompatibleAny": "None of your credentials expose an embedding model. Add a credential first.",
-			"noCompatibleLocked": "None of your credentials expose a model that can produce {{dimension}}-dim embeddings."
+			"lockedTitle": "Dimensão fixa em {{dimension}}d",
+			"lockedDescription": "Este servidor exige embeddings de {{dimension}} dimensões para todas as bases de conhecimento. Somente modelos compatíveis aparecem abaixo.",
+			"noCompatibleTitle": "Nenhum modelo de embeddings compatível",
+			"noCompatibleAny": "Nenhuma das suas credenciais oferece um modelo de embeddings. Adicione uma credencial primeiro.",
+			"noCompatibleLocked": "Nenhuma das suas credenciais oferece um modelo que gere embeddings com {{dimension}} dimensões."
 		},
 		"errors": {
-			"nameRequired": "Please give the knowledge base a name.",
-			"embeddingRequired": "Please pick an embedding model.",
-			"dimensionRequired": "Please pick a dimension.",
-			"chunkerRequired": "Please pick a chunking strategy."
+			"nameRequired": "Informe um nome para a base de conhecimento.",
+			"embeddingRequired": "Selecione um modelo de embeddings.",
+			"dimensionRequired": "Selecione uma dimensão.",
+			"chunkerRequired": "Selecione uma estratégia de divisão do conteúdo."
 		}
 	},
 	"dialog-knowledge-base-edit": {
-		"title": "Edit knowledge base",
-		"description": "Update the knowledge base name and description.",
+		"title": "Editar base de conhecimento",
+		"description": "Atualize o nome e a descrição da base de conhecimento.",
 		"name": {
-			"label": "Name",
-			"placeholder": "My knowledge base"
+			"label": "Nome",
+			"placeholder": "Minha base de conhecimento"
 		},
 		"descriptionField": {
-			"label": "Description",
-			"placeholder": "Describe what this knowledge base is for."
+			"label": "Descrição",
+			"placeholder": "Descreva a finalidade desta base de conhecimento."
 		},
 		"embeddingModel": {
-			"label": "Embedding model"
+			"label": "Modelo de embeddings"
 		},
 		"chunker": {
-			"label": "Chunker"
+			"label": "Divisor de conteúdo"
 		},
 		"errors": {
-			"nameRequired": "Please give the knowledge base a name."
+			"nameRequired": "Informe um nome para a base de conhecimento."
 		}
 	},
 	"dialog-knowledge-base-delete": {
-		"title": "Delete knowledge base",
-		"description": "This will permanently delete the knowledge base \"{{name}}\" and all of its indexed documents. This action cannot be undone."
+		"title": "Excluir base de conhecimento",
+		"description": "Isto excluirá permanentemente a base de conhecimento \"{{name}}\" e todos os documentos indexados. Esta ação não pode ser desfeita."
 	},
 	"credential": {
 		"noProviders": "No providers available",
