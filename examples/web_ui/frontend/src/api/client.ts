@@ -67,7 +67,9 @@ async function streamRequest(path: string, options: RequestOptions = {}): Promis
 		userId,
 		timeoutMs,
 	} = options;
-	const url = new URL(path, baseUrl ?? getBaseUrl());
+	// Keep an optional URL prefix (e.g. /backend) when joining API paths.
+	const origin = (baseUrl ?? getBaseUrl()).replace(/\/+$/, '') + '/';
+	const url = new URL(path.replace(/^\/+/, ''), origin);
 	if (params) {
 		Object.entries(params).forEach(([k, v]) => url.searchParams.set(k, v));
 	}
