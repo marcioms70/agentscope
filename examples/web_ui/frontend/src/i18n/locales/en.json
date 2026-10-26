@@ -34,6 +34,8 @@
 		"schedule": "Schedule",
 		"selectAgent": "Select an agent",
 		"settings": "Settings",
+		"switchToLight": "Switch to light mode",
+		"switchToDark": "Switch to dark mode",
 		"switchToZh": "切换为中文",
 		"switchToEn": "Switch to English",
 		"team": "Team",
