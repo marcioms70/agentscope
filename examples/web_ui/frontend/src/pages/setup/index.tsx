@@ -39,7 +39,7 @@ function notReadyComponents(detail: string): string {
 
 export const SetupPage = ({ onComplete, className }: Props) => {
 	const { t } = useTranslation();
-	const [url, setUrl] = useState(() => localStorage.getItem('server_url') ?? '');
+	const [url, setUrl] = useState(() => localStorage.getItem('server_url') ?? `${window.location.origin}/backend`);
 	const [username, setUsername] = useState(() => localStorage.getItem('username') ?? '');
 	const [checking, setChecking] = useState(false);
 	const [errorMsg, setErrorMsg] = useState('');
