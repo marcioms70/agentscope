@@ -1,6 +1,6 @@
 # AgentScope 2.0: Coolify application from Git
 # Source: branch coolify-deploy; Build strategy: Docker Compose
-# Domains: web -> 80, api -> 8000. Never expose Redis publicly.
+# Only the authenticated web service is published. API and Redis stay internal.
 services:
   redis:
     image: redis:7-alpine
@@ -36,6 +36,13 @@ services:
       context: .
       dockerfile: deploy/coolify/Dockerfile.web
     restart: unless-stopped
+    environment:
+      # Set both values as secret variables in Coolify before deploying.
+      # Empty values cause startup to fail closed.
+      AGENTSCOPE_BASIC_AUTH_USER: "${AGENTSCOPE_BASIC_AUTH_USER:-}"
+      AGENTSCOPE_BASIC_AUTH_PASSWORD: "${AGENTSCOPE_BASIC_AUTH_PASSWORD:-}"
+    depends_on:
+      - api
     expose:
       - "80"
 
