@@ -590,296 +590,296 @@
 		"hint": "Esta interface utiliza os dados da URL de servidor informada. O nome de usuário identifica suas sessões no serviço e não substitui a proteção de acesso."
 	},
 	"tour": {
-		"trigger": "Take a tour",
-		"prev": "Back",
-		"next": "Next",
-		"finish": "Finish",
-		"skip": "Skip",
-		"step": "Step {{current}} / {{total}}",
+		"trigger": "Fazer um tour",
+		"prev": "Voltar",
+		"next": "Próximo",
+		"finish": "Concluir",
+		"skip": "Pular",
+		"step": "Etapa {{current}} de {{total}}",
 		"createAgent": {
-			"title": "Create an agent",
-			"content": "Start by creating an agent — your chat partner."
+			"title": "Criar um agente",
+			"content": "Comece criando um agente — seu parceiro de conversa."
 		},
 		"createSession": {
-			"title": "Create a session",
-			"content": "Click + to start a new session."
+			"title": "Criar uma sessão",
+			"content": "Clique em + para iniciar uma nova sessão."
 		},
 		"llmSelect": {
-			"title": "Pick a model",
-			"content": "Choose a model; add a credential from the dropdown if needed."
+			"title": "Escolher um modelo",
+			"content": "Selecione um modelo; se necessário, adicione uma credencial pelo menu."
 		},
 		"permissionMode": {
-			"title": "Permission mode",
-			"content": "Decide whether tool calls need confirmation."
+			"title": "Modo de permissão",
+			"content": "Defina se as chamadas de ferramentas precisam de confirmação."
 		},
 		"chatInput": {
-			"title": "Start chatting",
-			"content": "Type a message and press Enter. Paperclip attaches files."
+			"title": "Começar a conversar",
+			"content": "Digite uma mensagem e pressione Enter. O clipe permite anexar arquivos."
 		}
 	},
 	"task-panel": {
-		"blockedBy": "blocked by"
+		"blockedBy": "bloqueada por"
 	},
 	"panel": {
 		"plan": {
-			"title": "Plan",
-			"completed": "Completed: {{count}}",
+			"title": "Plano",
+			"completed": "Concluídas: {{count}}",
 			"total": "Total: {{count}}",
-			"emptyTitle": "No tasks yet",
-			"emptyDescription": "Tasks the agent plans will show up here."
+			"emptyTitle": "Nenhuma tarefa ainda",
+			"emptyDescription": "As tarefas planejadas pelo agente aparecerão aqui."
 		},
 		"mcp": {
-			"description": "The MCP servers equipped in the workspace.",
-			"searchPlaceholder": "Search MCP in the workspace",
-			"add": "Add MCP",
-			"addDescription": "Reuse one you have already installed, or paste a configuration.",
-			"fromConfig": "From configuration",
-			"tools": "{{count}} tools",
-			"unhealthy": "This MCP could not be reached",
-			"healthy": "Connected",
-			"emptyTitle": "No MCP servers",
-			"emptyDescription": "Add an MCP server to equip the workspace with tools.",
-			"fromInstalled": "Installed MCPs",
-			"installedEmptyTitle": "Nothing installed yet",
-			"installedEmptyDescription": "Install one from the MCP Hub, or paste a configuration."
+			"description": "Servidores MCP disponíveis no ambiente de trabalho.",
+			"searchPlaceholder": "Pesquisar MCPs no ambiente de trabalho",
+			"add": "Adicionar MCP",
+			"addDescription": "Reutilize um MCP já instalado ou cole uma configuração.",
+			"fromConfig": "A partir de configuração",
+			"tools": "{{count}} ferramentas",
+			"unhealthy": "Este MCP está inacessível",
+			"healthy": "Conectado",
+			"emptyTitle": "Nenhum servidor MCP",
+			"emptyDescription": "Adicione um servidor MCP para disponibilizar ferramentas ao ambiente de trabalho.",
+			"fromInstalled": "MCPs instalados",
+			"installedEmptyTitle": "Nenhum MCP instalado ainda",
+			"installedEmptyDescription": "Instale um pela Central de MCPs ou cole uma configuração."
 		},
 		"skill": {
-			"title": "Skills",
-			"description": "The skills equipped in the workspace.",
-			"searchPlaceholder": "Search skills in the workspace",
-			"add": "Add Skill",
-			"emptyTitle": "No skills",
-			"emptyDescription": "Add a skill to equip the workspace.",
-			"addDescription": "Pick from your installed skills, or upload a local folder.",
-			"fromInstalled": "From installed",
-			"fromFolder": "Upload a folder",
-			"installedEmptyTitle": "No installed skills yet",
-			"installedEmptyDescription": "Install one from the skill hub, then add it here.",
-			"pickFolderTitle": "Pick a skill folder",
-			"pickFolderDescription": "The folder must hold a SKILL.md at its root.",
-			"pickFolder": "Choose folder",
-			"pickAnother": "Choose another",
-			"fileCount": "{{count}} files"
+			"title": "Habilidades",
+			"description": "Habilidades disponíveis no ambiente de trabalho.",
+			"searchPlaceholder": "Pesquisar habilidades no ambiente de trabalho",
+			"add": "Adicionar habilidade",
+			"emptyTitle": "Nenhuma habilidade",
+			"emptyDescription": "Adicione uma habilidade ao ambiente de trabalho.",
+			"addDescription": "Escolha uma habilidade instalada ou envie uma pasta local.",
+			"fromInstalled": "Entre as instaladas",
+			"fromFolder": "Enviar uma pasta",
+			"installedEmptyTitle": "Nenhuma habilidade instalada ainda",
+			"installedEmptyDescription": "Instale uma pela Central de Habilidades e adicione-a aqui.",
+			"pickFolderTitle": "Selecionar pasta de habilidade",
+			"pickFolderDescription": "A pasta deve conter um arquivo SKILL.md na raiz.",
+			"pickFolder": "Escolher pasta",
+			"pickAnother": "Escolher outra",
+			"fileCount": "{{count}} arquivos"
 		},
 		"knowledge": {
-			"title": "Knowledge Bases",
-			"description": "Knowledge bases the agent can retrieve from.",
-			"searchPlaceholder": "Search knowledge bases",
-			"emptyTitle": "No knowledge bases",
-			"emptyDescription": "Create one on the Knowledge Bases page first.",
-			"parametersTitle": "Retrieval settings",
-			"parametersDescription": "Knowledge base retrieval settings."
+			"title": "Bases de conhecimento",
+			"description": "Bases de conhecimento que o agente pode consultar.",
+			"searchPlaceholder": "Pesquisar bases de conhecimento",
+			"emptyTitle": "Nenhuma base de conhecimento",
+			"emptyDescription": "Crie uma primeiro na página Bases de conhecimento.",
+			"parametersTitle": "Configurações de recuperação",
+			"parametersDescription": "Configurações de consulta às bases de conhecimento."
 		},
 		"permission": {
-			"title": "Permissions",
-			"description": "The permissions applied in this session.",
-			"mode": "Mode: {{mode}}",
-			"workingDirectories": "Working Directories",
-			"noWorkingDirectories": "No working directories.",
-			"allow": "Allow",
-			"deny": "Deny",
-			"ask": "Ask",
-			"anyInvocation": "any invocation",
-			"emptyTitle": "No rules configured",
-			"emptyDescription": "Allow / deny / ask rules will appear here as they are added."
+			"title": "Permissões",
+			"description": "Permissões aplicadas nesta sessão.",
+			"mode": "Modo: {{mode}}",
+			"workingDirectories": "Diretórios de trabalho",
+			"noWorkingDirectories": "Nenhum diretório de trabalho.",
+			"allow": "Permitir",
+			"deny": "Negar",
+			"ask": "Perguntar",
+			"anyInvocation": "qualquer execução",
+			"emptyTitle": "Nenhuma regra configurada",
+			"emptyDescription": "As regras de permitir, negar e perguntar aparecerão aqui quando forem adicionadas."
 		},
 		"search": {
-			"emptyTitle": "No results",
-			"emptyDescription": "Nothing matches “{{query}}”."
+			"emptyTitle": "Nenhum resultado",
+			"emptyDescription": "Nenhum item corresponde a “{{query}}”."
 		},
-		"loading": "Loading…",
+		"loading": "Carregando…",
 		"team": {
-			"membersHeading": "Members",
-			"noMembers": "No members yet — ask the leader to spawn one with AgentCreate.",
-			"emptyTitle": "No team",
-			"emptyDescription": "This session is not part of a team. The agent forms one with TeamCreate.",
-			"running": "Running",
-			"idle": "Idle",
-			"missingSession": "(no session)"
+			"membersHeading": "Integrantes",
+			"noMembers": "Nenhum integrante ainda — peça ao líder para criar um com AgentCreate.",
+			"emptyTitle": "Nenhuma equipe",
+			"emptyDescription": "Esta sessão não faz parte de uma equipe. O agente pode criar uma com TeamCreate.",
+			"running": "Em execução",
+			"idle": "Ocioso",
+			"missingSession": "(sem sessão)"
 		}
 	},
 	"channel": {
 		"credentialBinding": {
-			"tab": "Scan QR code",
-			"manualTab": "Enter manually",
-			"scanHint": "Scan with the platform app and approve to create the credentials.",
-			"authorized": "Approved. Credentials are ready.",
-			"failed": "The binding could not be completed.",
-			"unsafeUrl": "The platform returned a link that cannot be shown safely.",
-			"retry": "Try again"
+			"tab": "Ler QR Code",
+			"manualTab": "Inserir manualmente",
+			"scanHint": "Escaneie com o aplicativo da plataforma e aprove a criação das credenciais.",
+			"authorized": "Aprovado. As credenciais estão prontas.",
+			"failed": "Não foi possível concluir a vinculação.",
+			"unsafeUrl": "A plataforma retornou um link que não pode ser exibido com segurança.",
+			"retry": "Tentar novamente"
 		},
-		"title": "Channels",
-		"subtitle": "Connect external platforms like Feishu and Discord so agents work in group chats",
+		"title": "Canais",
+		"subtitle": "Conecte plataformas externas, como Feishu e Discord, para seus agentes atuarem em conversas de grupo",
 		"status": "Status",
-		"connected": "Connected",
-		"enable": "Enable",
-		"disable": "Disable",
-		"deleteEntity": "channel",
-		"routing": "Routing",
-		"routingDesc": "Match inbound messages to an agent and a session scope. The last rule matches everything else.",
-		"sectionActive": "Connected",
-		"sectionAdd": "Add Channel",
-		"rules": "{{count}} rules",
+		"connected": "Conectado",
+		"enable": "Ativar",
+		"disable": "Desativar",
+		"deleteEntity": "canal",
+		"routing": "Roteamento",
+		"routingDesc": "Associe mensagens recebidas a um agente e escopo de sessão. A última regra recebe todas as demais mensagens.",
+		"sectionActive": "Conectados",
+		"sectionAdd": "Adicionar canal",
+		"rules": "{{count}} regras",
 		"empty": {
-			"title": "No channels",
-			"description": "Create a channel to connect your agent to external platforms like Feishu, DingTalk, etc."
+			"title": "Nenhum canal",
+			"description": "Crie um canal para conectar seu agente a plataformas externas, como Feishu, DingTalk e outras."
 		},
 		"create": {
-			"title": "Create Channel",
-			"titleFor": "Connect {{name}}",
-			"description": "Connect an agent to an external messaging platform.",
-			"channelType": "Platform",
-			"nameLabel": "Name",
-			"namePlaceholder": "e.g. Support desk",
-			"nameDesc": "Tells apart channels on the same platform",
-			"modelDesc": "Initial model for a new session",
-			"permissionMode": "Permission Mode",
-			"permissionModeDesc": "Initial permission mode for a new session",
-			"showToolMessages": "Show Tool Messages",
-			"showToolMessagesDesc": "Display tool call/result messages in the channel.",
-			"showThinking": "Show Thinking",
-			"showThinkingDesc": "Display model reasoning process in the channel."
+			"title": "Criar canal",
+			"titleFor": "Conectar {{name}}",
+			"description": "Conecte um agente a uma plataforma externa de mensagens.",
+			"channelType": "Plataforma",
+			"nameLabel": "Nome",
+			"namePlaceholder": "Ex.: Central de atendimento",
+			"nameDesc": "Diferencia canais da mesma plataforma",
+			"modelDesc": "Modelo inicial para uma nova sessão",
+			"permissionMode": "Modo de permissão",
+			"permissionModeDesc": "Modo de permissão inicial para uma nova sessão",
+			"showToolMessages": "Exibir mensagens das ferramentas",
+			"showToolMessagesDesc": "Mostra mensagens de chamadas e resultados das ferramentas no canal.",
+			"showThinking": "Exibir raciocínio",
+			"showThinkingDesc": "Mostra o processo de raciocínio do modelo no canal."
 		},
 		"fields": {
 			"app_id": {
-				"title": "App ID",
-				"description": "Feishu App ID"
+				"title": "ID do aplicativo",
+				"description": "ID do aplicativo Feishu"
 			},
 			"app_secret": {
-				"title": "App Secret",
-				"description": "Feishu App Secret"
+				"title": "Segredo do aplicativo",
+				"description": "Segredo do aplicativo Feishu"
 			},
 			"bot_token": {
-				"title": "Bot Token"
+				"title": "Token do bot"
 			},
 			"application_id": {
-				"title": "Application ID"
+				"title": "ID da aplicação"
 			},
 			"only_at_reply": {
-				"title": "Reply only when mentioned",
-				"description": "In group chats, reply only when the bot is @mentioned"
+				"title": "Responder apenas quando mencionado",
+				"description": "Em grupos, responder apenas quando o bot for mencionado com @"
 			},
 			"show_tool_process": {
-				"title": "Show tool process",
-				"description": "Show tool calls and results inline in the reply"
+				"title": "Exibir execução das ferramentas",
+				"description": "Mostra chamadas e resultados das ferramentas na própria resposta"
 			},
 			"show_thinking": {
-				"title": "Show thinking",
-				"description": "Show the model's reasoning inline in the reply"
+				"title": "Exibir raciocínio",
+				"description": "Mostra o raciocínio do modelo na própria resposta"
 			}
 		},
 		"edit": {
-			"title": "Edit Channel",
-			"description": "Update routing, model, and reply settings. Platform and credentials are immutable."
+			"title": "Editar canal",
+			"description": "Atualize o roteamento, o modelo e as configurações de resposta. A plataforma e as credenciais não podem ser alteradas."
 		},
 		"sessionScope": {
-			"per_chat": "Per Chat",
-			"per_chat_user": "Per Chat User"
+			"per_chat": "Por conversa",
+			"per_chat_user": "Por conversa e usuário"
 		},
 		"sessions": {
-			"title": "Sessions",
-			"empty": "No sessions yet",
-			"openInChat": "Open in chat"
+			"title": "Sessões",
+			"empty": "Nenhuma sessão ainda",
+			"openInChat": "Abrir na conversa"
 		},
 		"detail": {
-			"config": "Configuration",
-			"configDesc": "Initial configuration applied to new sessions",
+			"config": "Configuração",
+			"configDesc": "Configuração inicial aplicada às novas sessões",
 			"configItem": "Item",
-			"configValue": "Value",
-			"condition": "Condition",
-			"created": "Created",
-			"deleteChannel": "Delete channel",
-			"routingDesc": "How inbound messages map to an agent and session scope",
-			"sessionsDesc": "Sessions this channel has spawned",
-			"selectHint": "Select a channel to see details"
+			"configValue": "Valor",
+			"condition": "Condição",
+			"created": "Criado em",
+			"deleteChannel": "Excluir canal",
+			"routingDesc": "Como as mensagens recebidas são associadas a um agente e a um escopo de sessão",
+			"sessionsDesc": "Sessões criadas por este canal",
+			"selectHint": "Selecione um canal para ver os detalhes"
 		},
 		"state": {
-			"stopped": "Stopped",
-			"connecting": "Connecting",
-			"retrying": "Reconnecting",
-			"connected": "Connected",
-			"failed": "Failed"
+			"stopped": "Parado",
+			"connecting": "Conectando",
+			"retrying": "Reconectando",
+			"connected": "Conectado",
+			"failed": "Falhou"
 		},
 		"binding": {
-			"rule": "Match Rule",
-			"matchKey": "Match field",
-			"matchValue": "Match value",
-			"matchValuePlaceholder": "e.g. a chat_id",
-			"routeTo": "Route to",
-			"scope": "Session scope",
-			"fallback": "Fallback Rule",
-			"fallbackDesc": "Messages not matched by any rule above are routed here",
-			"catchAll": "All other messages",
-			"addRule": "Add rule"
+			"rule": "Regra de correspondência",
+			"matchKey": "Campo de correspondência",
+			"matchValue": "Valor de correspondência",
+			"matchValuePlaceholder": "Ex.: um chat_id",
+			"routeTo": "Encaminhar para",
+			"scope": "Escopo da sessão",
+			"fallback": "Regra padrão",
+			"fallbackDesc": "Mensagens que não corresponderem às regras acima serão encaminhadas para cá",
+			"catchAll": "Todas as outras mensagens",
+			"addRule": "Adicionar regra"
 		}
 	},
 	"mcp": {
-		"subtitle": "Browse and install MCP servers",
-		"hubsLabel": "Hubs",
-		"searchPlaceholder": "Search this hub",
-		"mineSearchPlaceholder": "Search your MCPs",
-		"noHubsTitle": "No hubs available",
-		"noHubsDescription": "Ask your administrator to add one.",
-		"noCardsTitle": "Nothing found",
-		"noCardsDescription": "Try a different keyword.",
-		"mineDescription": "The MCP servers you have installed",
-		"mineEmptyTitle": "No MCP servers yet",
-		"mineEmptyDescription": "Install one from a hub on the left.",
-		"needsConfig": "Needs configuration",
-		"stateful": "Stateful",
-		"configLabel": "Configuration",
-		"install": "Install",
-		"installed": "Installed",
-		"installTitle": "Install {{name}}",
-		"installDescription": "Adds it to your MCPs. Pick a session to use it in afterwards.",
-		"editTitle": "Edit {{name}}",
-		"editDescription": "Leave a secret blank to keep the one already stored.",
-		"nameLabel": "Name",
-		"loadFailedTitle": "Couldn't reach the server",
-		"loadFailedDescription": "Check the server URL and that the service is running.",
-		"retry": "Retry"
+		"subtitle": "Explore e instale servidores MCP",
+		"hubsLabel": "Centrais",
+		"searchPlaceholder": "Pesquisar nesta central",
+		"mineSearchPlaceholder": "Pesquisar seus MCPs",
+		"noHubsTitle": "Nenhuma central disponível",
+		"noHubsDescription": "Peça ao administrador para adicionar uma.",
+		"noCardsTitle": "Nada encontrado",
+		"noCardsDescription": "Tente outra palavra-chave.",
+		"mineDescription": "Servidores MCP que você instalou",
+		"mineEmptyTitle": "Nenhum servidor MCP ainda",
+		"mineEmptyDescription": "Instale um pela central à esquerda.",
+		"needsConfig": "Requer configuração",
+		"stateful": "Com estado",
+		"configLabel": "Configuração",
+		"install": "Instalar",
+		"installed": "Instalado",
+		"installTitle": "Instalar {{name}}",
+		"installDescription": "Adiciona aos seus MCPs. Depois, escolha uma sessão para utilizá-lo.",
+		"editTitle": "Editar {{name}}",
+		"editDescription": "Deixe uma credencial em branco para manter o valor salvo.",
+		"nameLabel": "Nome",
+		"loadFailedTitle": "Não foi possível acessar o servidor",
+		"loadFailedDescription": "Confira o endereço do servidor e se o serviço está em execução.",
+		"retry": "Tentar novamente"
 	},
 	"skill": {
-		"subtitle": "Browse and install skills",
-		"hubsLabel": "Hubs",
-		"searchPlaceholder": "Search this hub",
-		"mineSearchPlaceholder": "Search your skills",
-		"noHubsTitle": "No hubs available",
-		"noHubsDescription": "Ask your administrator to add one.",
-		"noCardsTitle": "Nothing found",
-		"noCardsDescription": "Try a different keyword.",
-		"mineDescription": "The skills you have installed",
-		"mineEmptyTitle": "No skills yet",
-		"mineEmptyDescription": "Install one from a hub on the left.",
-		"install": "Install",
-		"installed": "Installed",
-		"versionLabel": "Version",
-		"hubLabel": "Hub",
-		"updatedLabel": "Updated",
-		"updatedAgo": "Updated {{ago}} ago",
-		"updatedRecently": "Just updated",
-		"installsLabel": "Installs",
+		"subtitle": "Explore e instale habilidades",
+		"hubsLabel": "Centrais",
+		"searchPlaceholder": "Pesquisar nesta central",
+		"mineSearchPlaceholder": "Pesquisar suas habilidades",
+		"noHubsTitle": "Nenhuma central disponível",
+		"noHubsDescription": "Peça ao administrador para adicionar uma.",
+		"noCardsTitle": "Nada encontrado",
+		"noCardsDescription": "Tente outra palavra-chave.",
+		"mineDescription": "Habilidades que você instalou",
+		"mineEmptyTitle": "Nenhuma habilidade ainda",
+		"mineEmptyDescription": "Instale uma pela central à esquerda.",
+		"install": "Instalar",
+		"installed": "Instalada",
+		"versionLabel": "Versão",
+		"hubLabel": "Central",
+		"updatedLabel": "Atualizado",
+		"updatedAgo": "Atualizado há {{ago}}",
+		"updatedRecently": "Atualizado agora",
+		"installsLabel": "Instalações",
 		"downloadsLabel": "Downloads",
-		"linkLabel": "Page",
-		"viewOnHub": "View on hub",
-		"noReadme": "This skill ships no SKILL.md body.",
-		"loadFailedTitle": "Couldn't reach the server",
-		"loadFailedDescription": "Check the server URL and that the service is running.",
-		"retry": "Retry"
+		"linkLabel": "Página",
+		"viewOnHub": "Ver na central",
+		"noReadme": "Esta habilidade não tem conteúdo SKILL.md.",
+		"loadFailedTitle": "Não foi possível acessar o servidor",
+		"loadFailedDescription": "Confira o endereço do servidor e se o serviço está em execução.",
+		"retry": "Tentar novamente"
 	},
 	"agent-menu": {
-		"settings": "Settings",
-		"delete": "Delete agent"
+		"settings": "Configurações",
+		"delete": "Excluir agente"
 	},
 	"workdir": {
-		"title": "Working directory",
-		"description": "Pick the agent's working directory.",
-		"root": "Workspace root",
-		"parent": "Up one level",
-		"errorTitle": "Could not list this folder",
-		"pathPlaceholder": "Type or paste a path",
-		"empty": "This folder is empty",
-		"pressEnter": "Press Enter to check this path first",
-		"gitTooltip": "{{staged}} staged · {{unstaged}} modified · {{untracked}} untracked\nLine counts exclude untracked files"
+		"title": "Diretório de trabalho",
+		"description": "Escolha o diretório de trabalho do agente.",
+		"root": "Raiz do ambiente de trabalho",
+		"parent": "Subir um nível",
+		"errorTitle": "Não foi possível listar esta pasta",
+		"pathPlaceholder": "Digite ou cole um caminho",
+		"empty": "Esta pasta está vazia",
+		"pressEnter": "Pressione Enter para verificar este caminho primeiro",
+		"gitTooltip": "{{staged}} preparados · {{unstaged}} modificados · {{untracked}} não rastreados"
 	}
 }
